@@ -1,0 +1,30 @@
+# Hospital Inpatient Flow & Clinical Risk Command Center
+
+An end-to-end healthcare analytics dashboard built in **Power BI** powered by a **PostgreSQL** database. It monitors inpatient capacity, 30-day readmission risk, biomarker severity, and Social Determinants of Health (SDoH) across 10,000 patient encounters[cite: 2].
+
+---
+
+## 🛠️ Tech Stack
+- **Database:** PostgreSQL (`Healthcare_analytics`)
+- **Data Pipeline:** Python (Pandas, SQLAlchemy)
+- **BI Platform:** Power BI Desktop
+- **Calculations:** DAX (`_Measures` table)[cite: 1]
+
+---
+
+## 📌 Key Metrics & Visuals
+- **Executive KPIs:** Total Inpatient Volume (10K), High-Risk Readmission Rate (33.3%), Avg Length of Stay (15.1 days), Bed Days (151K), and Acuity Index (2.21).
+- **Clinical Acuity Scatter:** Serum creatinine vs. glucose levels by comorbidity[cite: 2].
+- **Comorbidity Risk Breakdown:** 100% stacked bar chart of readmission tiers across conditions.
+- **Payer Mix Donut:** High-risk volume distribution across insurance classes.
+- **Biomarker Matrix:** Cross-analysis of glycemic status and admission types.
+- **SDoH & Adherence:** Post-discharge compliance segmented by social support.
+- **Operational Bed Flow:** Inpatient volume vs. readmission rate across length-of-stay tiers.
+
+---
+
+## 🚀 Getting Started
+1. Load patient encounter data into PostgreSQL (`localhost:5432`).
+2. Open the `.pbix` file in Power BI Desktop.
+3. Update data source credentials under **Transform Data > Data Source Settings** to point to your local PostgreSQL instance.
+4. Hit **Refresh** to load the visual reports.
